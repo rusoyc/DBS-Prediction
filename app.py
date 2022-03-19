@@ -10,7 +10,7 @@ from flask import Flask, request, render_template
 # In[2]:
 
 
-app=Flask(__name__)
+app = Flask(__name__)
 
 
 # In[3]:
@@ -19,7 +19,7 @@ app=Flask(__name__)
 import joblib
 
 @app.route("/", methods=["GET","POST"])
-def i():
+def index():
     if request.method == "POST":
         rate = request.form.get("rates")
         print(rate)
