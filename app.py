@@ -26,7 +26,6 @@ def i():
         model = joblib.load("DBS_Reg")
         pred = model.predict([[float(rate)]])
         s = "The predicted DBS share price is " + str(pred)
-        print(s)
         
         return(render_template("index.html",result=s))
     else:
